@@ -1,0 +1,31 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches:
+      - learning_abhi  # Change this to your main branch name
+
+jobs:
+  robot_framework_tests:
+    runs-on: ubuntu-latest  # You can choose a different runner if needed
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Choose the Python version you need
+
+    - name: Install Dependencies
+      run: pip install -r requirements.txt  # Modify as needed
+
+    - name: Run Robot Framework Tests
+      run: robot Tests/  # Adjust the test path
+
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: robot-results
+        path: report.html  # Update with your actual test output path
