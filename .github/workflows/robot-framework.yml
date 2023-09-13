@@ -19,7 +19,7 @@ jobs:
         python-version: 3.x  # Choose the Python version you need
 
     - name: Install Dependencies
-      run: pip install -r requirements.txt  # Modify as needed
+      run: pip install -r requirement.txt  # Modify as needed
 
     - name: Run Robot Framework Tests
       run: robot Tests/  # Adjust the test path
