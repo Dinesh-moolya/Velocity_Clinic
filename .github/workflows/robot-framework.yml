@@ -18,6 +18,10 @@ jobs:
       with:
         python-version: 3.x  # Choose the Python version you need
 
+    - name: Robot Framework
+      uses: joonvena/robotframework-docker-action@v1.1
+            
+
     - name: Install Dependencies
       run: pip install -r requirement.txt  # Modify as needed
 
