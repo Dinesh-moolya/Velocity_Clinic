@@ -1,7 +1,7 @@
 *** Settings ***
-Resource  ../Resources/index.robot
-Test Setup  Open Browser To Login Page
-Test Teardown  Close Browser
+Resource         ./../Resources/index.robot
+Test Setup       Open Browser To Login Page
+Test Teardown    Close Browser
 
 *** Test Cases ***
 Validate Unsuccessful Login
