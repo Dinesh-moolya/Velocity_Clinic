@@ -14,5 +14,5 @@ jobs:
       - name: Robot Framework
         uses: tarathep/robotframework-github-action@v1.0
         with:
-        tests_dir: '${{ github.workspace }}/Tests'
-        reports_dir: '${{ github.workspace }}/Tests'
+          tests_dir: '${{ github.workspace }}/Tests'
+          reports_dir: '${{ github.workspace }}/Tests'
