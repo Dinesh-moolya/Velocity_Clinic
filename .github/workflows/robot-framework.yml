@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Robot Framework
-        uses: joonvena/robotframework-docker-action@v1.0
-        with:
-          robot_tests_dir: 'Tests'
-          robot_reports_dir: 'Tests'
+        uses: tarathep/robotframework-github-action@v1.0
+      with:
+        tests_dir: '${{ github.workspace }}/Tests'
+        reports_dir: '${{ github.workspace }}/Tests'
