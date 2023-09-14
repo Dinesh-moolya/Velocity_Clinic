@@ -6,7 +6,7 @@ ${url}  https://www.saucedemo.com/
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    ${url}    safari
+    Open Browser    ${url}    chrome
 
 Validate the message
     [Arguments]    ${locator}  ${InvalidLoginMessage}
