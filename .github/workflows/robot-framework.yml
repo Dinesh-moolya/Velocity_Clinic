@@ -28,4 +28,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: robot-results
-        path: report.html  # Update with your actual test output path
+        path: | 
+          report.html
+          output.xml
+          log.html
