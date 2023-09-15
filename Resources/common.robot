@@ -6,7 +6,10 @@ ${url}  https://www.saucedemo.com/
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    url= ${url}    browser= chrome    executable_path= $CHROMEWEBDRIVER
+    Open Browser
+    ...    url= ${url}
+    ...    browser= chrome
+    ...    executable_path= /usr/local/share/chromedriver-mac-x64
 
 Validate the message
     [Arguments]    ${locator}  ${InvalidLoginMessage}
