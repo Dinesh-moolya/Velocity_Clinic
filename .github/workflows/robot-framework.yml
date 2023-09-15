@@ -13,20 +13,19 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    # - name: Set up Python
-    #   uses: actions/setup-python@v2
-    #   with:
-    #     python-version: 3.x  # Choose the Python version you need
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Choose the Python version you need
 
-    # - name: Install Dependencies
-    #   run: pip3 install -r requirement.txt  # Modify as needed
+    - name: Install Dependencies
+      run: pip3 install -r requirement.txt  # Modify as needed
 
     - name: Run Robot Framework Tests
-      run: less Resources/common.robot  # Adjust the test path
-      # run: robot Tests/  # Adjust the test path
+      run: robot Tests/  # Adjust the test path
 
-    # - name: Upload Test Results
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: robot-results
-    #     path: report.html  # Update with your actual test output path
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: robot-results
+        path: report.html  # Update with your actual test output path
