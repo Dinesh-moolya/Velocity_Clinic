@@ -1,18 +1,26 @@
 name: Robot Framework Tests
+
 on:
   push:
     branches:
       - learning_abhi  # Change this to your main branch name
-    
+
 jobs:
-  robot_test:
-    runs-on: ubuntu-latest
-    name: Run Robot Framework Tests
+  robot_framework_tests:
+    runs-on: macos-latest  # You can choose a different runner if needed
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Robot Framework
-        uses: tarathep/robotframework-github-action@v1.0
-        with:
-          tests_dir: '${{ github.workspace }}/Tests'
-          reports_dir: '${{ github.workspace }}/Tests'
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: pip install -r requirement.txt  # Modify as needed
+
+    - name: Run Robot Framework Tests
+      run: robot Tests/  # Adjust the test path
+
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: robot-results
+        path: report.html  # Update with your actual test output path
