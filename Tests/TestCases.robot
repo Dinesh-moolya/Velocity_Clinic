@@ -9,3 +9,9 @@ Validate Unsuccessful Login
     [Tags]  negativeflow    login
     Fill the login form    ${ValidEmail}    ${InvalidPassword}
     Validate the message    ${validationMessage}    ${InvalidPasswordMessage}
+
+Validate Successful Login
+    [Documentation]  Validate successful login
+    [Tags]  positiveflow    login
+    Fill the login form    ${ValidEmail}    ${ValidPassword}
+    Verify the url    ${siteUrl}/inventory.html
