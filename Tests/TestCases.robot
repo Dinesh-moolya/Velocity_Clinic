@@ -8,4 +8,4 @@ Validate Unsuccessful Login
     [Documentation]  Validate unsuccessful login
     [Tags]  negativeflow    login
     Fill the login form    ${ValidEmail}    ${InvalidPassword}
-    Validate the message    ${validationMessage}    ${InvalidLoginMessage}
+    Validate the message    ${validationMessage}    ${InvalidPasswordMessage}

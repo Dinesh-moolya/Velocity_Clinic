@@ -8,7 +8,7 @@ ${ValidEmail} =    standard_user
 ${LockedOutEmail} =    locked_out_user
 ${ValidPassword} =    secret_sauce
 ${InvalidPassword} =    secret_sauce1
-${InvalidLoginMessage} =    Epic sadface: Username and password do not match any user in this service
+${InvalidPasswordMessage} =    Epic sadface: Username and password do not match any user in this service
 ${LockedOutMessage} =    Epic sadface: Sorry, this user has been locked out.
 
 #locators
